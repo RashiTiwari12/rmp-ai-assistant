@@ -1,0 +1,22 @@
+{
+    "reviews": [
+      {
+        "professor": "Prof1 Seldom",
+        "review": "Great professor...",
+        "subject": "Math",
+        "stars": 5
+      },
+      {
+        "professor": "Surbhi Maskio",
+        "review": "Great professor...",
+        "subject": "Chemistry",
+        "stars": 5
+      },
+      {
+        "professor": "Prof1 Seldom",
+        "review": "Great professor...",
+        "subject": "Math",
+        "stars": 5
+      }
+    ]
+  }
