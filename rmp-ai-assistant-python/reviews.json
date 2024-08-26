@@ -1,22 +1,39 @@
 {
-    "reviews": [
-      {
-        "professor": "Prof1 Seldom",
-        "review": "Great professor...",
-        "subject": "Math",
-        "stars": 5
-      },
-      {
-        "professor": "Surbhi Maskio",
-        "review": "Great professor...",
-        "subject": "Chemistry",
-        "stars": 5
-      },
-      {
-        "professor": "Prof1 Seldom",
-        "review": "Great professor...",
-        "subject": "Math",
-        "stars": 5
-      }
-    ]
-  }
+  "reviews": [
+    {
+      "professor": "Dr. James Seldom",
+      "review": "Dr. Seldom's lectures are exceptionally clear, making complex mathematics topics accessible and easy to grasp. He is known for his fair grading system and is always available for extra help during office hours. His commitment to student success is evident.",
+      "subject": "Mathematics",
+      "stars": 4.7,
+      "university": "University of Excellence"
+    },
+    {
+      "professor": "Dr. Surbhi Maskio",
+      "review": "Dr. Maskio excels at explaining chemistry concepts, with a particular strength in organic chemistry. Her lab sessions are engaging and hands-on, providing practical experience. However, her exams can be challenging, so it's important to study thoroughly and pay attention to the details.",
+      "subject": "Chemistry",
+      "stars": 4.5,
+      "university": "Institute of Chemical Sciences"
+    },
+    {
+      "professor": "Prof. Allen Watkins",
+      "review": "Prof. Watkins demonstrates strong knowledge in physics, though his teaching style may come across as somewhat dry. He tends to engage less with students, but his assignments are clear, and his grading is fair. Overall, a solid professor for those who prefer straightforward instruction.",
+      "subject": "Physics",
+      "stars": 3.8,
+      "university": "College of Natural Sciences"
+    },
+    {
+      "professor": "Dr. Emily Johnson",
+      "review": "Dr. Johnson is an outstanding history professor who brings the subject to life through interactive lectures and lively class discussions. Her passion for history is contagious, though be prepared for substantial reading. Her classes are enriching and highly recommended.",
+      "subject": "World History",
+      "stars": 4.9,
+      "university": "Global University"
+    },
+    {
+      "professor": "Dr. Martin Lopez",
+      "review": "Dr. Lopez is knowledgeable in philosophy but can be difficult to follow at times. His lectures often veer off-topic, which can make it challenging to maintain focus. Despite this, his deep understanding of the subject matter is evident.",
+      "subject": "Philosophy",
+      "stars": 3.5,
+      "university": "Philosophical Institute"
+    }
+  ]
+}

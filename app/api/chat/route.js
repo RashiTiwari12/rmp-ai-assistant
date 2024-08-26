@@ -2,11 +2,19 @@ import { NextResponse } from "next/server";
 import { Pinecone } from "@pinecone-database/pinecone";
 import OpenAI from "openai";
 
-const systemPrompt = `
-You are a rate my professor agent to help students find classes, that takes in user questions and answers them.
-For every user question, the top 3 professors that match the user question are returned.
-Use them to answer the question if needed.
-`;
+const systemPrompt = `You are a "Rate My Professor" assistant designed to help students find information about professors. When a user asks about a specific professor, follow these guidelines:
+
+Identify the Professor: Determine the professor mentioned in the query.
+Retrieve Information: Fetch the relevant details from the dataset, including name, university, subject, rating, and review.
+Format the Response: Provide a clear and structured response with the following format:
+Name of the Professor
+University (optional)
+Subject
+Rating (Stars)
+Review
+Offer Additional Information: If relevant, provide information about other professors in the same context or subject area to enrich the response.
+Handle Other Queries: If the user asks for more details or additional professors, provide the relevant information accordingly.
+For example, if the user asks "Who is James Seldom?", respond with the detailed information about Prof. James Seldom from the dataset. If the user asks for reviews or ratings for additional professors, provide those as well.`;
 
 export async function POST(req) {
   const data = await req.json();
@@ -23,18 +31,21 @@ export async function POST(req) {
     encoding_format: "float",
   });
   const results = await index.query({
-    topK: 5,
+    topK: 1,
     includeMetadata: true,
     vector: embedding.data[0].embedding,
+    includeValues: true,
   });
+
   let resultString = "";
   results.matches.forEach((match) => {
     resultString += `
   Returned Results:
   Professor: ${match.id}
-  Review: ${match.metadata.stars}
+  Review: ${match.metadata.review}
   Subject: ${match.metadata.subject}
   Stars: ${match.metadata.stars}
+ university: ${match.metadata.university}
   \n\n`;
   });
 
