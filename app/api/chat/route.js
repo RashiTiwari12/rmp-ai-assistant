@@ -71,6 +71,7 @@ export async function POST(req) {
   const lastMessageContent = lastMessage.content + resultString
   const lastDataWithoutLastMessage = data.slice(0, data.length - 1)
   
+  // Anthropic Claude API & Model
   const apiKey = process.env.CLAUDE_API_KEY;
   const anthropic = new Anthropic({
     apiKey: apiKey // Replace with your actual API key
@@ -88,4 +89,25 @@ export async function POST(req) {
     messages: messages,
     stream: true,
   });
+
+  const stream = ReadableStream({
+    async start(controller){
+        const encoder = new TextEncoder()
+        try{
+            for await (const chunk of completion){
+                const content = chunk.choices[0]?.delta?.content
+                if(content){
+                    const text = encoder.encode(content)
+                    controller.enqueue(text)
+                }
+            }
+        }
+        catch(err){
+            controller.error(err)
+        }
+        finally{
+            controller.close()
+        }
+    }
+  })
 }
