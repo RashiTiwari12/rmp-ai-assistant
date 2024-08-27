@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { Pinecone } from "@pinecone-database/pinecone";
 import { SentenceTransformer } from "@tuesdaycrowd/sentence-transformers";
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+const Anthropic = require('@anthropic-ai/sdk');
 
 const systemPrompt = `
 # Rate My Professor Agent System Prompt
@@ -54,14 +56,29 @@ export async function POST(req) {
     vector: embedding.data[0].embedding
   })
 
-  let resultString = 'Returned results:'
+  let resultString = '\n\nReturned results from vector dd (done automatically):'
   results.matches.forEach(match=>{
     resultString += `\n
-    Professor: 
-    Review:
-    Subject:
-    Stars:
+    Professor: ${match.id}
+    Review: ${match.metadata.stars}
+    Subject: ${match.metadata.subject}
+    Stars: ${match.metadata.stars}
     \n\n
     `
+  })
+
+  const lastMessage = data[data.length -1]
+  const lastMessageContent = lastMessage.content + resultString
+  const lastDataWithoutLastMessage = data.slice(0, data.length - 1)
+  const apiKey = process.env.GOOGLE_API_KEY;
+  const anthropic = new Anthropic({
+    apiKey: apiKey // Replace with your actual API key
+  });
+  const completion = await  openai.chat.completion.create({
+    message:[
+        {role: 'system', content: systemPrompt},
+        ...lastDataWithoutLastMessage,
+        {role: 'user', content: lastMessageContent},
+    ]
   })
 }
