@@ -70,15 +70,21 @@ export async function POST(req) {
   const lastMessage = data[data.length -1]
   const lastMessageContent = lastMessage.content + resultString
   const lastDataWithoutLastMessage = data.slice(0, data.length - 1)
-  const apiKey = process.env.GOOGLE_API_KEY;
+  
+  const apiKey = process.env.CLAUDE_API_KEY;
   const anthropic = new Anthropic({
     apiKey: apiKey // Replace with your actual API key
   });
-  const completion = await  openai.chat.completion.create({
-    message:[
-        {role: 'system', content: systemPrompt},
-        ...lastDataWithoutLastMessage,
-        {role: 'user', content: lastMessageContent},
-    ]
-  })
+  
+  const messages = [
+    { role: 'system', content: systemPrompt },
+    ...lastDataWithoutLastMessage,
+    { role: 'user', content: lastMessageContent }
+  ];
+  
+  const completion = await anthropic.messages.create({
+    model: 'claude-3-sonnet-20240229', // Use the appropriate model version
+    max_tokens: 1000, // Adjust as needed
+    messages: messages,
+  });
 }
