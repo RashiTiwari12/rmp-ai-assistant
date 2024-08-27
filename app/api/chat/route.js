@@ -86,5 +86,6 @@ export async function POST(req) {
     model: 'claude-3-sonnet-20240229', // Use the appropriate model version
     max_tokens: 1000, // Adjust as needed
     messages: messages,
+    stream: true,
   });
 }
