@@ -1,0 +1,124 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. Emily Thompson",
+        "subject": "Biology",
+        "stars": 4,
+        "review": "Dr. Thompson's lectures are engaging and she explains complex concepts clearly. Very approachable during office hours."
+      },
+      {
+        "professor": "Prof. Michael Chen",
+        "subject": "Computer Science",
+        "stars": 5,
+        "review": "Brilliant instructor! Prof. Chen's passion for coding is contagious. His projects are challenging but incredibly rewarding."
+      },
+      {
+        "professor": "Dr. Sarah Rodriguez",
+        "subject": "Psychology",
+        "stars": 3,
+        "review": "Dr. Rodriguez knows her stuff, but her lectures can be a bit dry. Exams are fair though."
+      },
+      {
+        "professor": "Prof. Jonathan Lee",
+        "subject": "Mathematics",
+        "stars": 4,
+        "review": "Prof. Lee breaks down complex math concepts into digestible pieces. His problem sets are tough but helpful."
+      },
+      {
+        "professor": "Dr. Olivia Patel",
+        "subject": "Chemistry",
+        "stars": 5,
+        "review": "Dr. Patel's lab sessions are fantastic! She makes organic chemistry fun and interesting."
+      },
+      {
+        "professor": "Prof. David Wilson",
+        "subject": "History",
+        "stars": 2,
+        "review": "Prof. Wilson seems knowledgeable but often goes off-topic. Grading can be inconsistent."
+      },
+      {
+        "professor": "Dr. Rachel Greene",
+        "subject": "English Literature",
+        "stars": 4,
+        "review": "Dr. Greene's passion for literature is evident. Her essay prompts are thought-provoking and encourage creativity."
+      },
+      {
+        "professor": "Prof. Alexander Ivanov",
+        "subject": "Physics",
+        "stars": 5,
+        "review": "Prof. Ivanov is a genius! His demonstrations make complex physics concepts come alive."
+      },
+      {
+        "professor": "Dr. Maria Sanchez",
+        "subject": "Sociology",
+        "stars": 3,
+        "review": "Dr. Sanchez assigns interesting readings, but her lectures can be hard to follow at times."
+      },
+      {
+        "professor": "Prof. James Cooper",
+        "subject": "Economics",
+        "stars": 4,
+        "review": "Prof. Cooper relates economic theories to real-world scenarios effectively. His exams are challenging but fair."
+      },
+      {
+        "professor": "Dr. Laura Yamamoto",
+        "subject": "Art History",
+        "stars": 5,
+        "review": "Dr. Yamamoto's lectures are like taking a journey through time. Her enthusiasm is infectious!"
+      },
+      {
+        "professor": "Prof. Robert Brown",
+        "subject": "Political Science",
+        "stars": 2,
+        "review": "Prof. Brown's lectures are monotonous and he rarely engages with students. Assignments are unclear."
+      },
+      {
+        "professor": "Dr. Emma Watson",
+        "subject": "Neuroscience",
+        "stars": 4,
+        "review": "Dr. Watson explains complex neural mechanisms clearly. Her research insights are fascinating."
+      },
+      {
+        "professor": "Prof. Hassan Ali",
+        "subject": "International Relations",
+        "stars": 5,
+        "review": "Prof. Ali brings a wealth of real-world experience to the classroom. Discussions are always enlightening."
+      },
+      {
+        "professor": "Dr. Sophia Lee",
+        "subject": "Environmental Science",
+        "stars": 3,
+        "review": "Dr. Lee is knowledgeable but can be disorganized. Field trips are the highlight of her course."
+      },
+      {
+        "professor": "Prof. Thomas Mueller",
+        "subject": "Philosophy",
+        "stars": 4,
+        "review": "Prof. Mueller challenges students to think critically. His Socratic method can be intimidating but effective."
+      },
+      {
+        "professor": "Dr. Aisha Patel",
+        "subject": "Anthropology",
+        "stars": 5,
+        "review": "Dr. Patel's firsthand research experiences make her lectures come alive. She's incredibly supportive of students."
+      },
+      {
+        "professor": "Prof. Gregory Smith",
+        "subject": "Business Administration",
+        "stars": 2,
+        "review": "Prof. Smith seems more interested in his consulting work than teaching. Lectures lack depth and relevance."
+      },
+      {
+        "professor": "Dr. Natalie Wong",
+        "subject": "Linguistics",
+        "stars": 4,
+        "review": "Dr. Wong's enthusiasm for language is contagious. Her assignments are creative and engaging."
+      },
+      {
+        "professor": "Prof. Carlos Mendez",
+        "subject": "Music Theory",
+        "stars": 5,
+        "review": "Prof. Mendez is a musical genius! His composition workshops are incredibly inspiring and instructive."
+      }
+    ]
+  }
