@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { Pinecone } from "@pinecone-database/pinecone";
 import { SentenceTransformer } from "@tuesdaycrowd/sentence-transformers";
-const { GoogleGenerativeAI } = require("@google/generative-ai");
 const Anthropic = require('@anthropic-ai/sdk');
 
 const systemPrompt = `
@@ -110,4 +109,5 @@ export async function POST(req) {
         }
     }
   })
+  return new NextResponse(stream)
 }
